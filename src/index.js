@@ -62,8 +62,11 @@ function loadHome() {
     MENU PAGE LOADER
 */
 function loadMenu() {
+    // CONTENT DIV
     let contentDiv = document.createElement('div');
     contentDiv.classList.add('grid');
+
+    // ITERATING OVER GRID
     for(let i = 0; i < 8; i++) {
         // GRID ITEM
         let gridItem = document.createElement('div');
@@ -118,10 +121,10 @@ function loadMenu() {
                 break;
         };
 
-        textContent.append(itemName);
-        textContent.append(itemDesc);
-        gridItem.append(textContent);
-        contentDiv.append(gridItem);
+        textContent.appendChild(itemName);
+        textContent.appendChild(itemDesc);
+        gridItem.appendChild(textContent);
+        contentDiv.appendChild(gridItem);
     }
     contentDiv.id = "menu-grid";
 
@@ -132,10 +135,104 @@ function loadMenu() {
     ABOUT PAGE LOADER
 */
 function loadAbout() {
-    // BUILDING SUBHEADER
-    let subHeader = document.createElement('h4');
-    subHeader.textContent = "Welcome to The Hot Spot!";
-    content.appendChild(subHeader);
+    /*
+        3 divs each taking up 1/3 of the page
+            first div: lorem ipsum personal history text
+            2nd div: picture of owner
+            3rd div: phone #, email, address
+    */
+
+    // CREATING DIVS
+    let contentDiv = document.createElement('div');
+    let leftDiv = document.createElement('div');
+    let middleDiv = document.createElement('div');
+    let rightDiv = document.createElement('div');
+
+    contentDiv.classList.add('flex');
+
+    // LEFT DIV
+    leftDiv.classList.add('flex', 'column', 'single');
+    
+    let leftDivTitle = document.createElement('h2');
+    leftDivTitle.textContent = "Our History";
+    
+    let leftDivContent = document.createElement('p');
+    leftDivContent.textContent = "A long time ago, in a galaxy far, far away, a man was born. Born without arms at the tender age of 62, Mario Mario knew he was destined for pizzas.";
+    
+    leftDiv.appendChild(leftDivTitle);
+    leftDiv.appendChild(leftDivContent);
+
+    
+    // MIDDLE DIV
+    middleDiv.classList.add('flex', 'column', 'single');
+    
+    let middleDivImg = new Image();
+    middleDivImg.classList.add('founder-img');
+    middleDivImg.src = '../images/about/founder.png';
+
+    let middleDivTitle = document.createElement('h2');
+    middleDivTitle.textContent = "The Doughfather, Cabanela Mario";
+
+    middleDiv.appendChild(middleDivImg);
+    middleDiv.appendChild(middleDivTitle);
+
+    // RIGHT DIV
+    rightDiv.classList.add('flex', 'column', 'single');
+
+        // PHONE NUMBER
+    let phoneDiv = document.createElement('div');
+    phoneDiv.classList.add('flex');
+
+    let phoneIcon = new Image();
+    phoneIcon.classList.add('about-icon');
+    phoneIcon.src = '../images/about/phone.png';
+
+    let phoneText = document.createElement('p');
+    phoneText.textContent = "Our number: (760) 717-3521";
+
+    phoneDiv.appendChild(phoneIcon);
+    phoneDiv.appendChild(phoneText);
+
+        // EMAIL ADDRESS
+
+    let emailDiv = document.createElement('div');
+    emailDiv.classList.add('flex');
+
+    let emailIcon = new Image();
+    emailIcon.classList.add('about-icon');
+    emailIcon.src = '../images/about/email.png';
+
+    let emailText = document.createElement('p');
+    emailText.textContent = "Our e-mail address: pizzagirl223@nasa.gov";
+
+    emailDiv.appendChild(emailIcon);
+    emailDiv.appendChild(emailText);
+
+        // PHYSICAL ADDRESS
+
+    let addressDiv = document.createElement('div');
+    addressDiv.classList.add('flex');
+
+    let addressIcon = new Image();
+    addressIcon.classList.add('about-icon');
+    addressIcon.src = '../images/about/car.png';
+
+    let addressText = document.createElement('p');
+    addressText.textContent = "Our address: 1026 Monique Court, Fallbrook, CA, 92084";
+
+    addressDiv.appendChild(addressIcon);
+    addressDiv.appendChild(addressText);
+
+    rightDiv.appendChild(phoneDiv);
+    rightDiv.appendChild(emailDiv);
+    rightDiv.appendChild(addressDiv);
+
+
+    // APPENDING 
+    contentDiv.appendChild(leftDiv);
+    contentDiv.appendChild(middleDiv);
+    contentDiv.appendChild(rightDiv);
+    content.appendChild(contentDiv);
 }
 
 loadHome();

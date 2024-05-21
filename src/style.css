@@ -104,3 +104,19 @@ header {
 .menu-border {
     border: 2px solid maroon;
 }
+
+/*
+    ABOUT CSS
+*/
+
+.founder-img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+.about-icon {
+    object-fit: contain;
+    width: 10%;
+    height: auto;
+}
