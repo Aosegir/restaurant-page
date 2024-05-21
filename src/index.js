@@ -1,6 +1,6 @@
 // IMPORTS
 import './style.css';
-import Autumn from "../images/autumn.jpg";
+import Pizza from "../images/pizza.jpeg";
 
 //DOM VARIABLES
 let homeButton = document.getElementById('home');
@@ -9,6 +9,15 @@ let aboutButton = document.getElementById('about');
 
 // content is the scope we will be building the website pages within
 let content = document.getElementById('content');
+
+
+
+
+
+
+
+
+
 
 /*
     HOME PAGE LOADER
@@ -20,22 +29,22 @@ function loadHome() {
 
     // BUILDING HEADER TEXT
     let headerText = document.createElement('h1');
-    headerText.textContent = "The Autumn Night";
+    headerText.textContent = "The Hot Spot";
     content.appendChild(headerText);
 
     // BUILDING HEADER IMAGE
     let headerImage = new Image();
-    headerImage.src = Autumn;
+    headerImage.src = Pizza;
     content.appendChild(headerImage);
 
     // BUILDING SUBHEADER
     let subHeader = document.createElement('h4');
-    subHeader.textContent = "Welcome to The Autumn Night!";
+    subHeader.textContent = "Welcome to The Hot Spot!";
     content.appendChild(subHeader);
 
     // BUILDING TEXT BLURB
     let text = document.createElement('p');
-    text.textContent = "This restaurant seeks to bring the wonders of the season right to your doorstep. Please feel free to browse our selection until you find something that matches your appetites. You can be sure that you'll never be disappointed!"
+    text.textContent = "Text"
     content.appendChild(text);
 }
 
@@ -49,7 +58,7 @@ function loadMenu() {
 
     // BUILDING HEADER TEXT
     let headerText = document.createElement('h1');
-    headerText.textContent = "The Autumn Night";
+    headerText.textContent = "The Hot Spot";
     content.appendChild(headerText);
 }
 
@@ -63,7 +72,7 @@ function loadAbout() {
 
     // BUILDING SUBHEADER
     let subHeader = document.createElement('h4');
-    subHeader.textContent = "Welcome to The Autumn Night!";
+    subHeader.textContent = "Welcome to The Hot Spot!";
     content.appendChild(subHeader);
 }
 
