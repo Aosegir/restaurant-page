@@ -46,5 +46,29 @@ header {
 }
 
 /*
-
+    FLEX CSS
 */
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.main-center {
+    justify-content: center;
+}
+
+.cross-center {
+    align-items: center;
+}
+
+.single {
+    flex: 1;
+}
+
+.double {
+    flex: 2;
+}
