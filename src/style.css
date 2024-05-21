@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     background: ivory;
+    box-sizing: border-box;
 }
 
 /*
@@ -71,4 +72,35 @@ header {
 
 .double {
     flex: 2;
+}
+
+/*
+    GRID CSS
+*/
+
+.grid {
+    display: grid;
+}
+
+#menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border: 1px solid maroon;
+    height: 90vh;
+    width: 100vw;
+}
+
+/*
+    MENU CSS
+*/
+
+.contain {
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+    margin: 10px;
+}
+
+.menu-border {
+    border: 2px solid maroon;
 }
