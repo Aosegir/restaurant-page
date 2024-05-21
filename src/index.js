@@ -19,14 +19,55 @@ import Email from '../images/about/email.png';
 import Car from '../images/about/car.png';
 
 //DOM VARIABLES
+/*
 let homeButton = document.getElementById('home');
 let menuButton = document.getElementById('menu');
 let aboutButton = document.getElementById('about');
-
+*/
 // content is the scope we will be building the website pages within
 let content = document.getElementById('content');
 
+let header = document.getElementById('header');
 
+/*
+    HEADER WORK
+*/
+
+let titleDiv = document.createElement('div');
+titleDiv.id = "title";
+
+let titleImg = new Image();
+titleImg.src = Pizza;
+titleImg.id = "header-img";
+
+let headerText = document.createElement('h4');
+headerText.id = "header-text";
+headerText.textContent = "The Hot Spot";
+
+titleDiv.appendChild(titleImg);
+titleDiv.appendChild(headerText);
+
+let buttonsNav = document.createElement('nav');
+buttonsNav.id = "buttons";
+
+let homeButton = document.createElement('button');
+homeButton.id = "home";
+homeButton.textContent = "Home";
+
+let menuButton = document.createElement('button');
+menuButton.id = "menu";
+menuButton.textContent = "Menu";
+
+let aboutButton = document.createElement('button');
+aboutButton.id = "about";
+aboutButton.textContent = "About";
+
+buttonsNav.appendChild(homeButton);
+buttonsNav.appendChild(menuButton);
+buttonsNav.appendChild(aboutButton);
+
+header.appendChild(titleDiv);
+header.appendChild(buttonsNav);
 
 
 
