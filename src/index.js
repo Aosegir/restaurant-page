@@ -2,6 +2,22 @@
 import './style.css';
 import Pizza from "../images/pizza.jpeg";
 
+// MENU IMPORTS
+import Menu0 from '../images/menu/menu-0.png';
+import Menu1 from '../images/menu/menu-1.png';
+import Menu2 from '../images/menu/menu-2.png';
+import Menu3 from '../images/menu/menu-3.png';
+import Menu4 from '../images/menu/menu-4.png';
+import Menu5 from '../images/menu/menu-5.png';
+import Menu6 from '../images/menu/menu-6.png';
+import Menu7 from '../images/menu/menu-7.png';
+
+//ABOUT IMPORTS
+import Founder from '../images/about/founder.png';
+import Phone from '../images/about/phone.png';
+import Email from '../images/about/email.png';
+import Car from '../images/about/car.png';
+
 //DOM VARIABLES
 let homeButton = document.getElementById('home');
 let menuButton = document.getElementById('menu');
@@ -74,9 +90,7 @@ function loadMenu() {
 
         // IMAGE
         let itemImage = new Image();
-        itemImage.src = `../images/menu/menu-${i}.png`;
         itemImage.classList.add('contain');
-        gridItem.appendChild(itemImage);
 
         // TEXT
         let textContent = document.createElement('div');
@@ -85,34 +99,42 @@ function loadMenu() {
 
         switch(i) {
             case 0:
+                itemImage.src = Menu0;
                 itemName.textContent = "Pepperoni Pizza";
                 itemDesc.textContent = "You know it, you love it!";
                 break;
             case 1:
+                itemImage.src = Menu1;
                 itemName.textContent = "Cheese Pizza";
                 itemDesc.textContent = "Who can go wrong with the classic?";
                 break;
             case 2:
+                itemImage.src = Menu2;
                 itemName.textContent = "Meat Lover's Pizza";
                 itemDesc.textContent = "For the carnivore in you.";
                 break;
             case 3:
+                itemImage.src = Menu3;
                 itemName.textContent = "Veggie Pizza";
                 itemDesc.textContent = "When you want to be healthy, but still order pizza.";
                 break;
             case 4:
+                itemImage.src = Menu4;
                 itemName.textContent = "Ultimate Pizza";
                 itemDesc.textContent = "Ultimate meat and ultimate veg. The best of both.";
                 break;
             case 5:
+                itemImage.src = Menu5;
                 itemName.textContent = "Hawaiian Pizza";
                 itemDesc.textContent = "You know what you like, and I respect that!";
                 break;
             case 6:
+                itemImage.src = Menu6;
                 itemName.textContent = "Neapolitan Pizza";
                 itemDesc.textContent = "You're either classy or like ice cream!";
                 break;
             case 7:
+                itemImage.src = Menu7;
                 itemName.textContent = "BBQ Chicken Pizza";
                 itemDesc.textContent = "So fresh, it might walk off the plate!";
                 break;
@@ -121,6 +143,7 @@ function loadMenu() {
                 break;
         };
 
+        gridItem.appendChild(itemImage);
         textContent.appendChild(itemName);
         textContent.appendChild(itemDesc);
         gridItem.appendChild(textContent);
@@ -168,7 +191,7 @@ function loadAbout() {
     
     let middleDivImg = new Image();
     middleDivImg.classList.add('founder-img');
-    middleDivImg.src = '../images/about/founder.png';
+    middleDivImg.src = Founder;
 
     let middleDivTitle = document.createElement('h2');
     middleDivTitle.textContent = "The Doughfather, Cabanela Mario";
@@ -185,7 +208,7 @@ function loadAbout() {
 
     let phoneIcon = new Image();
     phoneIcon.classList.add('about-icon');
-    phoneIcon.src = '../images/about/phone.png';
+    phoneIcon.src = Phone;
 
     let phoneText = document.createElement('p');
     phoneText.textContent = "Our number: (760) 717-3521";
@@ -200,7 +223,7 @@ function loadAbout() {
 
     let emailIcon = new Image();
     emailIcon.classList.add('about-icon');
-    emailIcon.src = '../images/about/email.png';
+    emailIcon.src = Email;
 
     let emailText = document.createElement('p');
     emailText.textContent = "Our e-mail address: pizzagirl223@nasa.gov";
@@ -215,7 +238,7 @@ function loadAbout() {
 
     let addressIcon = new Image();
     addressIcon.classList.add('about-icon');
-    addressIcon.src = '../images/about/car.png';
+    addressIcon.src = Car;
 
     let addressText = document.createElement('p');
     addressText.textContent = "Our address: 1026 Monique Court, Fallbrook, CA, 92084";
